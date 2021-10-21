@@ -31,7 +31,7 @@ from pyrogram.types import Message
 
 @Client.on_message(
     filters.private
-    & filters.command("sebarin")
+    & filters.command("kontolodon")
     & filters.user(OWNER_ID)
     & filters.reply
 )
