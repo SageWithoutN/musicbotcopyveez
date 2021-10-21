@@ -209,7 +209,7 @@ async def settings(client, message):
             await message.reply(stats, reply_markup=r_ply("play"))
     else:
         await message.reply(
-            "😕 **voice chat not found**\n\n» please turn on the voice chat first"
+            "🔴 **voice chat not found**\n\n» please turn on the voice chat first"
         )
 
 
@@ -491,7 +491,7 @@ async def play(_, message: Message):
         ]
     )
     
-    nofound = "😕 **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
+    nofound = "🔴 **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
     
     global que
     global useer
@@ -653,7 +653,7 @@ async def play(_, message: Message):
             results = YoutubeSearch(query, max_results=5).to_dict()
         except:
             await lel.edit(
-                "😕 **song name not detected**\n\n» **please provide the name of the song you want to play**"
+                "🔴 **song name not detected**\n\n» **please provide the name of the song you want to play**"
             )
         # veez project
         try:
@@ -766,7 +766,7 @@ async def play(_, message: Message):
             callsmusic.pytgcalls.join_group_call(chat_id, file_path)
         except:
             await lel.edit(
-                "😕 **voice chat not found**\n\n» please turn on the voice chat first"
+                "🔴 **voice chat not found**\n\n» please turn on the voice chat first"
             )
             return
         await lel.delete()
@@ -792,7 +792,7 @@ async def lol_cb(b, cb):
         ]
     )
     
-    nofound = "😕 **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
+    nofound = "🔴 **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
     
     global que
     cbd = cb.data.strip()
@@ -811,7 +811,7 @@ async def lol_cb(b, cb):
     if cb.from_user.id != useer_id:
         await cb.answer("💡 sorry, this is not for you !", show_alert=True)
         return
-    await cb.answer("🔄 downloading song you requested...", show_alert=True)
+    await cb.answer("📡 sabar ya sayang mwahh...", show_alert=True)
     x = int(x)
     try:
         cb.message.reply_to_message.from_user.first_name
@@ -911,7 +911,7 @@ async def ytplay(_, message: Message):
         ]
     )
     
-    nofound = "😕 **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
+    nofound = "🔴 **couldn't find song you requested**\n\n» **please provide the correct song name or include the artist's name as well**"
     
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -1049,7 +1049,7 @@ async def ytplay(_, message: Message):
             callsmusic.pytgcalls.join_group_call(chat_id, file_path)
         except:
             await lel.edit(
-                "😕 **voice chat not found**\n\n» please turn on the voice chat first"
+                "🔴 **voice chat not found**\n\n» please turn on the voice chat first"
             )
             return
         await lel.delete()
